@@ -50,3 +50,5 @@ Temporary Items
 *.prefs
 *.xml
 *.properties
+*.o
+Debug/FRCUserProgram

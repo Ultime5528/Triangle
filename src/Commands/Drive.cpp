@@ -29,7 +29,7 @@ void Drive::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void Drive::Execute() {
-
+	Robot::basePilotable->Drive(Robot::oi->getJoystick()->GetX(), -Robot::oi->getJoystick()->GetY(), Robot::oi->getJoystick()->GetTwist());
 }
 
 // Make this return true when this Command no longer needs to run execute()
@@ -39,11 +39,11 @@ bool Drive::IsFinished() {
 
 // Called once after isFinished returns true
 void Drive::End() {
-
+	Robot::basePilotable->Stop();
 }
 
 // Called when another command which requires one or more of the same
 // subsystems is scheduled to run
 void Drive::Interrupted() {
-
+	End();
 }
