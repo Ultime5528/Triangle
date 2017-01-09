@@ -25,6 +25,7 @@ void RobotMap::init() {
 
     basePilotableThrustL.reset(new VictorSP(0));
     lw->AddActuator("BasePilotable", "ThrustL", std::static_pointer_cast<VictorSP>(basePilotableThrustL));
+    basePilotableThrustL->SetInverted(true);
     
     basePilotableThrustR.reset(new VictorSP(1));
     lw->AddActuator("BasePilotable", "ThrustR", std::static_pointer_cast<VictorSP>(basePilotableThrustR));

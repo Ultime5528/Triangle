@@ -52,3 +52,4 @@ Temporary Items
 *.properties
 *.o
 Debug/FRCUserProgram
+/Debug/

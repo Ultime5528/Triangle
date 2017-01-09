@@ -29,7 +29,7 @@ void Drive::Initialize() {
 
 // Called repeatedly when this Command is scheduled to run
 void Drive::Execute() {
-	Robot::basePilotable->Drive(Robot::oi->getJoystick()->GetX(), -Robot::oi->getJoystick()->GetY(), Robot::oi->getJoystick()->GetTwist());
+	Robot::basePilotable->Drive(Robot::oi->getJoystick()->GetX(), -Robot::oi->getJoystick()->GetY(), 0.0f/*Robot::oi->getJoystick()->GetTwist()*/);
 }
 
 // Make this return true when this Command no longer needs to run execute()

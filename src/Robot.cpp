@@ -62,6 +62,9 @@ void Robot::TeleopInit() {
 	// these lines or comment it out.
 	if (autonomousCommand.get() != nullptr)
 		autonomousCommand->Cancel();
+
+	BasePilotable::factor = (float)SmartDashboard::GetNumber("Factor", 1.0);
+	BasePilotable::rightFactor = (float)SmartDashboard::GetNumber("RightFactor", 1.0);
 }
 
 void Robot::TeleopPeriodic() {
